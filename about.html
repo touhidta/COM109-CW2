@@ -1,170 +1,256 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us | Curryosity</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://raw.githubusercontent.com/touhidta/COM109-CW1/refs/heads/main/style.css">
-  <script src="script.js" defer></script>
-  <style>
-    .team {
-  padding: 4rem 2rem;
-  background-color: rgba(255, 255, 255, 0.05);
-  text-align: center;
-}
-
-.team-grid {
-  display: flex;
-  gap: 2rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.team-member {
-  background-color: rgba(255, 255, 255, 0.05);
-  padding: 1rem;
-  border-radius: 10px;
-  text-align: center;
-  max-width: 300px;
-}
-
-.team-member img {
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
-  margin-bottom: 1rem;
-}
-
-.team-member h3 {
-  margin-bottom: 0.5rem;
-  color: var(--primary);
-    }
-    .testimonials {
-  padding: 4rem 2rem;
-  background-color: var(--secondary);
-  color: var(--white);
-}
-
-.testimonials-grid {
-  display: flex;
-  gap: 2rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.testimonial {
-  background-color: rgba(255, 255, 255, 0.05);
-  padding: 1rem;
-  border-radius: 10px;
-  max-width: 300px;
-  text-align: center;
-  font-style: italic;
-}
-
-.testimonial span {
-  display: block;
-  margin-top: 1rem;
-  font-weight: bold;
-  color: var(--primary);
-    }
-    
-  </style>
-</head>
-<body>
-  <!-- Navigation Bar -->
-  <nav id="navbar">
-  <div class="logo">Curryosity</div>
+<nav id="navbar">
+  <div class="logo"><svg fill="#bc9667" height="24px" width="24px" style="margin-bottom:-5px" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268.333 268.333" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 268.333 268.333" stroke="#bc9667">
+      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+      <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+      <g id="SVGRepo_iconCarrier">
+        <g>
+          <path d="m250.833,29.916h-19.333v-11.5c0-6.996-5.671-12.667-12.667-12.667h-169.333c-6.996,0-12.667,5.671-12.667,12.667v11.5h-19.333c-9.665,0-17.5,7.835-17.5,17.5 0,9.665 7.835,17.5 17.5,17.5h19.333v1.01c0,53.117 43.578,96.177 97.333,96.177 53.756,0 97.333-43.06 97.333-96.177v-1.01h19.333c9.665,0 17.5-7.835 17.5-17.5 0.001-9.665-7.834-17.5-17.499-17.5z"></path>
+          <path d="m188.249,238.75h-108.165c-6.581,0-11.917,5.335-11.917,11.917s5.335,11.917 11.917,11.917h108.165c6.581,0 11.917-5.335 11.917-11.917s-5.336-11.917-11.917-11.917z"></path>
+          <path d="m136.387,171.466c-0.597-0.287-1.314-0.128-1.732,0.386-4.046,4.973-13.248,13.791-11.726,25.061 1.732,12.826 9.576,19.437 7.998,27.723-0.225,1.179 0.362,2.365 1.436,2.901 1.074,0.537 2.373,0.295 3.183-0.592 6.111-6.69 12.376-16.231 9.149-24.94-4.881-13.174-9.674-19.021-7.528-28.945 0.139-0.647-0.183-1.306-0.78-1.594z"></path>
+          <path d="m172.529,171.466c-0.597-0.287-1.314-0.128-1.732,0.386-4.046,4.973-13.248,13.791-11.726,25.061 1.732,12.826 9.576,19.437 7.998,27.723-0.225,1.179 0.362,2.365 1.436,2.901 1.074,0.537 2.373,0.295 3.183-0.592 6.111-6.69 12.376-16.231 9.149-24.94-4.881-13.174-9.674-19.021-7.528-28.945 0.139-0.647-0.183-1.306-0.78-1.594z"></path>
+          <path d="m100.245,171.466c-0.597-0.287-1.314-0.128-1.732,0.386-4.046,4.973-13.248,13.791-11.726,25.061 1.732,12.826 9.576,19.437 7.998,27.723-0.225,1.179 0.362,2.365 1.436,2.901 1.074,0.537 2.373,0.295 3.183-0.592 6.111-6.69 12.376-16.231 9.149-24.94-4.881-13.174-9.674-19.021-7.528-28.945 0.14-0.647-0.183-1.306-0.78-1.594z"></path>
+        </g>
+      </g>
+    </svg> Curryosity</div>
   <div class="nav-links">
-    <a href="./index.html">Home</a>
-    <a href="./index.html#menu">Menu</a>
-    <a href="./index.html#reservation">Reservation</a>
-    <a href="#">About</a>
-    <a href="./index.html#contact">Contact</a>
+    <a href="#home">Home</a>
+    <a href="#menu">Menu</a>
+    <a href="#reservation">Reservation</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
   </div>
   <div class="hamburger">
     <i class="fas fa-bars"></i>
   </div>
-  </nav>
+</nav>
 
-  <!-- About Section -->
-  <section id="about" class="about">
-    <div class="section-title">
+<section id="home" class="hero">
+  <div class="hero-content">
+    <h1>Welcome to <span> Curryosity </span></h1>
+    <p>Experience fine dining at its best</p>
+    <a href="#reservation" class="cta-button">Book a Table</a>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <div class="section-title">
     <h2>About Us</h2>
+  </div>
+  <div class="about-content">
+    <div class="about-image">
+      <img src="https://freerangestock.com/sample/77702/restaurant-interior-with-tables-chairs-and-menu.jpg" alt="La Maison restaurant interior">
     </div>
-    <div class="about-content">
-      <div class="about-text">
-        <p>Founded in 2020, <strong>Curryosity</strong> is more than just a restaurant—it’s an experience. Our philosophy combines the richness of traditional French cuisine with modern culinary artistry. Every dish is crafted with passion to create an unforgettable dining experience.</p>
-        <p>From intimate dinners to grand celebrations, we aim to bring people together over the love of food. Our restaurant offers an ambiance that combines sophistication and comfort, making every visit unique.</p>
-      </div>
-      <div class="about-image">
-        <img src="https://freerangestock.com/sample/77702/restaurant-interior-with-tables-chairs-and-menu.jpg" alt="Restaurant Interior">
-      </div>
+    <div class="about-text">
+      <p>Founded in 2020, Curryosity is more than just a restaurant—it’s an experience. Our culinary philosophy blends the rich traditions of French cuisine with a modern, innovative twist, ensuring that every dish we serve is a feast for both the palate and the senses. At Curryosity, we believe dining is an art, and we craft each meal with that same passion and precision.</p>
+      <a href="about.html">Learn more</a>
     </div>
-  </section>
 
-  <!-- Team Section -->
-  <section id="team" class="team">
-    <div class="section-title">
-      <h2>Meet Our Team</h2>
-    </div>
-    <div class="team-grid">
-      <div class="team-member">
-        <img src="https://via.placeholder.com/150" alt="Chef John">
-        <h3>Chef John Doe</h3>
-        <p>Executive Chef with 20+ years of experience blending French and Indian cuisines.</p>
-      </div>
-      <div class="team-member">
-        <img src="https://via.placeholder.com/150" alt="Manager Jane">
-        <h3>Jane Smith</h3>
-        <p>Restaurant Manager dedicated to creating exceptional guest experiences.</p>
-      </div>
-      <div class="team-member">
-        <img src="https://via.placeholder.com/150" alt="Pastry Chef Maria">
-        <h3>Maria Gonzalez</h3>
-        <p>Pastry Chef specializing in desserts that are both beautiful and delicious.</p>
-      </div>
-    </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Testimonials Section -->
-  <section id="testimonials" class="testimonials">
-    <div class="section-title">
-      <h2>What Our Customers Say</h2>
+<section id="menu" class="menu">
+  <div class="section-title">
+    <h2>Our Menu</h2>
+  </div>
+  <div class="menu-grid" id="menuGrid">
+    <!-- Menu items will be populated by JavaScript -->
+  </div>
+  <div class="menu-button-container">
+    <a href="menu.html" class="cta-button">View Full Menu</a>
+  </div>
+</section>
+<section id="featured" class="featured-dishes">
+  <div class="section-title">
+    <h2>Featured Dishes</h2>
+  </div>
+  <div class="featured-grid">
+    <div class="featured-item">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/%22Hyderabadi_Dum_Biryani%22.jpg" alt="Hyderabadi Dum Biryani">
+      <h3>Hyderabadi Dum Biryani</h3>
+      <div class="rating">
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9734;</span> <!-- Empty star -->
+      </div>
+      <p>Aromatic basmati rice layered with tender marinated chicken and cooked to perfection.</p>
     </div>
-    <div class="testimonials-grid">
-      <div class="testimonial">
-        <p>"Absolutely amazing food! The flavors were exquisite, and the service was impeccable."</p>
-        <span>- Emily, Food Critic</span>
+    <div class="featured-item">
+      <img src="https://cdn.prod.website-files.com/6549128db41d15ae06784cbc/6644ab9937bf50fdaa8c99fa_Butter%20Chicken-p-1080.webp" alt="Butter Chicken">
+      <h3>Butter Chicken</h3>
+      <div class="rating">
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9734;</span> <!-- Empty stars -->
       </div>
-      <div class="testimonial">
-        <p>"Curryosity has become my go-to spot for celebrations. Highly recommend their butter chicken!"</p>
-        <span>- Jason, Regular Customer</span>
-      </div>
-      <div class="testimonial">
-        <p>"A true culinary gem. From ambiance to dishes, everything was top-notch."</p>
-        <span>- Rachel, Blogger</span>
-      </div>
+      <p>Our signature creamy tomato-based curry with tender chicken.</p>
     </div>
-  </section>
+    <div class="featured-item">
+      <img src="https://cdn.prod.website-files.com/654924556009114c605140c3/65ddd0b47748864c7df79b63_chicken-tIkka-p-1080.avif" alt="Chicken Tikka">
+      <h3>Chicken Tikka</h3>
+      <div class="rating">
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+      </div>
+      <p>Succulent grilled chicken marinated in exotic spices.</p>
+    </div>
+  </div>
+</section>
+<section id="events-offers" class="events-offers">
+  <div class="section-title">
+    <h2>Events & Special Offers</h2>
+  </div>
+  <div class="offers-grid">
+    <div class="offer-item">
+      <img src="https://storage.googleapis.com/nub-news-files/nub-news-file-storage/565296/conversions/mM8mikhsRV6psQIABLB8EpslG63fea-metaUGF0cmkgVGhhbGkgMi5wbmc%3D--category.jpg" alt="Thali Special Night">
+      <h3>Grand Thali Night</h3>
+      <p>Indulge in an authentic Indian feast with a variety of traditional dishes served in a grand Thali.</p>
+      <p><strong>Date:</strong> Every Saturday</p>
+      <a href="#reservation" class="cta-button">Reserve Your Thali</a>
+    </div>
+    <div class="offer-item">
+      <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Festive Sweets">
+      <h3>Festive Sweets Offer</h3>
+      <p>Celebrate the season with complimentary Gulab Jamun or Rasmalai on orders above $50.</p>
+      <p><strong>Valid Till:</strong> 31st December 2024</p>
+      <a href="#menu" class="cta-button">View Menu</a>
+    </div>
+    <div class="offer-item">
+      <img src="https://i.pinimg.com/736x/33/c8/08/33c808349c36b6cd276ff4ceec10f368.jpg" alt="Cultural Evening">
+      <h3>Cultural Evening</h3>
+      <p>Immerse yourself in Indian culture with live performances of classical music and dance.</p>
+      <p><strong>Date:</strong> Every Friday Evening</p>
+      <a href="#reservation" class="cta-button">Book Your Table</a>
+    </div>
+  </div>
+</section>
 
-  <!-- Footer -->
-  <footer id="contact">
+<section id="reservation" class="reservation">
+  <div class="section-title">
+    <h2>Make a Reservation</h2>
+  </div>
+  <form class="reservation-form" id="reservationForm">
+    <div class="form-group">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" required>
+      <div class="error"></div>
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" required>
+      <div class="error"></div>
+    </div>
+    <div class="form-group">
+      <label for="date">Date</label>
+      <input type="date" id="date" required>
+      <div class="error"></div>
+    </div>
+    <div class="form-group">
+      <label for="time">Time</label>
+      <select id="time" required>
+        <option value="">Select time</option>
+        <option value="18:00">6:00 PM</option>
+        <option value="19:00">7:00 PM</option>
+        <option value="20:00">8:00 PM</option>
+        <option value="21:00">9:00 PM</option>
+      </select>
+      <div class="error"></div>
+    </div>
+    <div class="form-group">
+      <label for="guests">Number of Guests</label>
+      <input type="number" id="guests" min="1" max="10" required>
+      <div class="error"></div>
+    </div>
+    <button type="submit" class="cta-button">Submit Reservation</button>
+  </form>
+</section>
+<section id="reviews" class="reviews">
+  <div class="section-title">
+    <h2>Customer Reviews</h2>
+  </div>
+  <div class="reviews-grid" id="reviewsGrid">
+    <!-- Customer reviews will be dynamically populated here -->
+  </div>
+
+  <!-- Review Submission Form -->
+  <!-- Button to show review form -->
+  <button id="showReviewFormBtn" class="cta-button">Leave a Review</button>
+
+  <!-- Review Submission Form (Initially hidden) -->
+  <div id="reviewFormContainer" class="review-form-container" style="display: none;">
+    <h3>Leave a Review</h3>
+    <form id="reviewForm" class="review-form">
+      <!-- First Line: Name and Rating -->
+      <div class="form-row">
+        <div class="form-group">
+          <label for="customerName">Your Name</label>
+          <input type="text" id="customerName" required>
+        </div>
+        <div class="form-group">
+          <label for="customerRating">Rating</label>
+          <select id="customerRating" required>
+            <option value="1">1 Star</option>
+            <option value="2">2 Stars</option>
+            <option value="3">3 Stars</option>
+            <option value="4">4 Stars</option>
+            <option value="5">5 Stars</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Second Line: Feedback and Submit Button -->
+      <div class="form-row">
+        <div class="form-feedback">
+          <label for="customerFeedback">Your Feedback</label>
+          <textarea id="customerFeedback" rows="3" required></textarea>
+        </div>
+
+      </div>
+      <button type="submit" class="cta-button">Submit Review</button>
+    </form>
+  </div>
+
+</section>
+
+<footer id="contact">
+  <div class="footer-container">
+    <!-- Contact Information -->
+    <div class="footer-contact">
+      <h3>Contact Us</h3>
+      <p><strong>Location:</strong> 123 Spice Avenue, Curry Town, IN 560001</p>
+      <p><strong>Phone:</strong> +91 98765 43210</p>
+      <p><strong>Email:</strong> <a href="mailto:info@curryosity.com">info@curryosity.com</a></p>
+    </div>
+
+    <!-- Social Links -->
     <div class="social-links">
+      <h3>Follow Us</h3>
       <a href="#"><i class="fab fa-facebook"></i></a>
       <a href="#"><i class="fab fa-instagram"></i></a>
       <a href="#"><i class="fab fa-tiktok"></i></a>
       <p>Follow us @curryosity</p>
     </div>
+  </div>
+
+  <!-- Footer Bottom -->
+  <div class="footer-bottom">
     <p>&copy; 2024 Curryosity. All rights reserved.</p>
-  </footer>
-  <script>
-// Mobile Menu Toggle
-const hamburger = document.querySelector(".hamburger");
-const navLinks = document.querySelector(".nav-links");
-hamburger.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
-});
-    </script>
-</body>
-</html>
+  </div>
+</footer>
+
+<div class="modal" id="confirmationModal">
+  <div class="modal-content">
+    <span class="close-modal">&times;</span>
+    <h2>Reservation Confirmed!</h2>
+    <p>Thank you for choosing Curryosity.</p>
+    <p>We'll send you a confirmation email shortly.</p>
+  </div>
+</div>
+
+<button id="scrollToTop" class="scroll-to-top" title="Go to top"><i class="fa-solid fa-chevron-up"></i></button>
