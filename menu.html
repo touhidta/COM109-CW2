@@ -1,1 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu | Curryosity</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <style>
+    .menu-categories {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
 
+.category-btn {
+  padding: 0.8rem 1.5rem;
+  background-color: var(--primary);
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.category-btn:hover {
+  background-color: #a17c4f;
+    }
+    .menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.menu-item {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.menu-item:hover {
+  transform: translateY(-5px);
+}
+
+.menu-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.menu-item h3 {
+  color: var(--primary);
+  margin: 1rem 0 0.5rem;
+}
+
+.menu-item p {
+  color: var(--white);
+  margin-bottom: 0.5rem;
+    }
+    
+    
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav id="navbar">
+    <div class="logo">
+      <svg fill="#bc9667" height="24px" width="24px" style="margin-bottom:-5px" ... (rest of SVG)></svg>
+      Curryosity
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="#" class="active">Menu</a>
+      <a href="reservation.html">Reservation</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="hamburger">
+      <i class="fas fa-bars"></i>
+    </div>
+  </nav>
+
+  <!-- Menu Section -->
+  <section id="menu" class="menu">
+    <div class="section-title">
+      <h2>Our Menu</h2>
+    </div>
+
+    <!-- Menu Categories -->
+    <div class="menu-categories">
+      <button class="category-btn" data-category="starters">Starters</button>
+      <button class="category-btn" data-category="mains">Main Course</button>
+      <button class="category-btn" data-category="desserts">Desserts</button>
+      <button class="category-btn" data-category="drinks">Drinks</button>
+    </div>
+
+    <!-- Menu Items Grid -->
+    <div class="menu-grid" id="menuGrid">
+      <!-- Items will be dynamically populated by JavaScript -->
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+  <div class="footer-container">
+    <!-- Contact Information -->
+    <div class="footer-contact">
+      <h3>Contact Us</h3>
+      <p><strong>Location:</strong> 123 Spice Avenue, Curry Town, IN 560001</p>
+      <p><strong>Phone:</strong> +91 98765 43210</p>
+      <p><strong>Email:</strong> <a href="mailto:info@curryosity.com">info@curryosity.com</a></p>
+    </div>
+
+    <!-- Social Links -->
+    <div class="social-links">
+      <h3>Follow Us</h3>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-tiktok"></i></a>
+      <p>Follow us @curryosity</p>
+    </div>
+  </div>
+
+  <!-- Footer Bottom -->
+  <div class="footer-bottom">
+    <p>&copy; 2024 Curryosity. All rights reserved.</p>
+  </div>
+</footer>
+  <script>
+    // Menu Data
+const menuItems = [
+  {
+    category: "starters",
+    name: "Samosa",
+    description: "Crispy pastry filled with spiced potatoes and peas.",
+    price: "$8",
+    image: "https://images.pexels.com/photos/14477873/pexels-photo-14477873.jpeg"
+  },
+  {
+    category: "starters",
+    name: "Paneer Tikka",
+    description: "Grilled Indian cottage cheese marinated in spices.",
+    price: "$12",
+    image: "https://pixahive.com/wp-content/uploads/2020/10/Paneer-tikka-135473-pixahive.jpg"
+  },
+  {
+    category: "mains",
+    name: "Butter Chicken",
+    description: "Tender chicken cooked in creamy tomato sauce.",
+    price: "$20",
+    image: "https://feelgoodfoodie.net/wp-content/uploads/2024/02/Easy-Butter-Chicken-TIMG.jpg"
+  },
+  {
+    category: "mains",
+    name: "Lamb Rogan Josh",
+    description: "Slow-cooked lamb curry with aromatic spices.",
+    price: "$22",
+    image: "https://www.krumpli.co.uk/wp-content/uploads/2023/10/Lamb-Rogan-Josh-Curry-04-720x720.jpg"
+  },
+  {
+    category: "desserts",
+    name: "Gulab Jamun",
+    description: "Sweet milk dumplings soaked in rose-flavored syrup.",
+    price: "$6",
+    image: "https://chefadora.b-cdn.net/003f0f0351967a7cb6212a8d9bfaf889_f956154e73.jpg"
+  },
+  {
+    category: "desserts",
+    name: "Rasmalai",
+    description: "Soft cheese patties in creamy milk sauce.",
+    price: "$7",
+    image: "https://butteroverbae.com/wp-content/uploads/2019/10/milk-powder-rasmalai.jpg"
+  },
+  {
+    category: "drinks",
+    name: "Mango Lassi",
+    description: "Sweet yogurt drink with fresh mangoes.",
+    price: "$5",
+    image: "https://annikaeats.com/wp-content/uploads/2024/03/DSC_1071.jpg"
+  },
+  {
+    category: "drinks",
+    name: "Masala Chai",
+    description: "Indian spiced tea with milk and aromatic herbs.",
+    price: "$4",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTV97haGKMKYtfnn50N1H32sNejlF-z54SdA&s"
+  }
+];
+
+// Populate Menu
+const menuGrid = document.getElementById("menuGrid");
+const categoryButtons = document.querySelectorAll(".category-btn");
+
+function populateMenu(category) {
+  menuGrid.innerHTML = "";
+  const filteredItems = category
+    ? menuItems.filter((item) => item.category === category)
+    : menuItems;
+
+  filteredItems.forEach((item) => {
+    const menuItem = document.createElement("div");
+    menuItem.className = "menu-item";
+    menuItem.innerHTML = `
+      <img src="${item.image}" alt="${item.name}">
+      <h3>${item.name}</h3>
+      <p>${item.description}</p>
+      <p><strong>${item.price}</strong></p>
+    `;
+    menuGrid.appendChild(menuItem);
+  });
+}
+
+// Event Listeners for Category Buttons
+categoryButtons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const category = btn.dataset.category;
+    populateMenu(category);
+  });
+});
+
+// Load All Items by Default
+populateMenu();
+    
+  </script>
+</body>
+</html>
