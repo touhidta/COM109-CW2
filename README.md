@@ -10,14 +10,19 @@ Welcome to **Curryosity**, a refined and modern fine dining experience. This web
 - **Confirmation Modal**: After submitting a reservation, a confirmation modal appears, confirming the details and thanking the user for their booking.
 - **Mobile Responsive**: The site is fully responsive, offering an optimal experience on both desktop and mobile devices.
 - **Smooth Scrolling Navigation**: Smooth scroll functionality for seamless navigation between sections (Home, Menu, Reservation, About, and Contact).
-- **Social Media Links**: Links to social media platforms such as Facebook, Instagram, and Twitter.
+- **Social Media Links**: Links to social media platforms such as Facebook, Instagram, and TikTok.
+- **Customer Reviews**: A section for customers to submit reviews with ratings and feedback, along with a dynamic display of existing reviews.
+- **Toggleable Review Form**: The review form is hidden by default and can be revealed with a button click for a cleaner interface.
+- **Featured Dishes Section**: A section displaying popular dishes with images, descriptions, and ratings.
+- **Scroll-to-Top Button**: A button that appears after scrolling down, allowing users to quickly navigate to the top of the page.
 
 ## Technologies Used
 
 - **HTML**: Structure of the website with semantic elements.
 - **CSS**: Styling of the website with modern techniques such as Flexbox and CSS Grid. Responsive design principles to support all screen sizes.
-- **JavaScript**: Used for dynamic menu population, form validation, and handling the mobile menu toggle.
+- **JavaScript**: Used for dynamic menu population, form validation, handling mobile menu toggle, displaying customer reviews, and adding the scroll-to-top functionality.
 - **FontAwesome**: Icons for the hamburger menu and social media links.
+- **LocalStorage** (Optional): For storing customer reviews temporarily on the client-side.
 
 ## Installation
 
@@ -40,6 +45,8 @@ No server-side setup is required, as this website is a static front-end project.
 - **Menu Section**: The menu is populated dynamically from the JavaScript array `menuItems`, allowing easy updates to the menu without editing the HTML directly. Add new items by simply editing the array.
 - **Reservation Form**: Users can fill out their details and submit a reservation. The form validates user input for correct format and future dates. Upon successful submission, a modal appears to confirm the reservation.
 - **Responsive Navigation**: The navigation bar adapts for smaller screens with a hamburger menu. Clicking the hamburger icon toggles the visibility of the navigation links.
+- **Customer Reviews**: Users can leave a review with a star rating, name, and feedback. The reviews are displayed dynamically, and the form can be toggled with a button.
+- **Featured Dishes**: Popular dishes are featured with images, descriptions, and star ratings, enhancing the restaurant’s appeal.
 
 ## Future Improvements
 
@@ -47,6 +54,7 @@ No server-side setup is required, as this website is a static front-end project.
 - **Interactive Menu**: Add detailed descriptions and nutritional information for each dish.
 - **User Accounts**: Allow users to create accounts to track past reservations or manage bookings.
 - **Payment Integration**: Implement payment options for online reservations.
+- **More Dynamic Features**: Incorporate a live chat feature for customer inquiries or a waitlist system for reservations.
 
 ## Contributing
 
@@ -55,5 +63,3 @@ Contributions are welcome! If you’d like to contribute, feel free to fork the 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
