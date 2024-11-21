@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us | Curryosity</title>
-  <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://raw.githubusercontent.com/touhidta/COM109-CW1/refs/heads/main/style.css">
   <script src="script.js" defer></script>
   <style>
     .team {
@@ -157,5 +158,13 @@
     </div>
     <p>&copy; 2024 Curryosity. All rights reserved.</p>
   </footer>
+  <script>
+// Mobile Menu Toggle
+const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".nav-links");
+hamburger.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+    </script>
 </body>
 </html>
